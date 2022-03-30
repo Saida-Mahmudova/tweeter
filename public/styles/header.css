@@ -1,0 +1,14 @@
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width:100%;
+  background-color: orange;
+  background-image: url("/images/checkered-pattern.png");
+}
+
+header h2 {
+  display: block;
+}

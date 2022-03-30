@@ -5,6 +5,8 @@
  */
 html {
   box-sizing: border-box;
+  
+
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -16,10 +18,45 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #f6f1ec; /*#f4f1ec*/
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+main {    
+  margin: auto;    
+  display: flex;    
+  align-items: center;    
+  justify-content: center;    
+  flex-direction: column;    
+  background-color: #f4f1ec;  
+}
+section {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-family: 'Bungee';
+  display: block;
+}
+.counter {
+  font-family: 'Bungee';
+  font-weight:700;
+}
+
+.redCounter {
+  color:red;
+  font-family: 'Bungee';
+  font-weight: 700;
+}

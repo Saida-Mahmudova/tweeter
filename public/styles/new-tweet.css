@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+#tweet-text {
+  border:transparent;
+  border-bottom: #57544d 4px solid;
+  background-color: #f4f1ec;
+  font-weight: 700;
+}
+label {
+  font-weight: 700;
+}
+.new-tweet :focus {
+  outline: none;
+}
+
+.new-tweet {
+  width: 89%;
+}

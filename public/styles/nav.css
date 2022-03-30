@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  width: auto;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  padding-left: 1.5em ;
+  padding-right: 1.5em;
+  padding-top: 1em;
+}
+span {
+  font-family: 'Bungee', cursive;
+ font-size: 40px;
+}
+
+div {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.inline {
+  display: block;
+}
+
+.fa-solid {
+  color:red;
+  display: flex;
+  align-items: center;
+  padding:5px;
+}
