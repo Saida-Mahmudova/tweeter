@@ -9,6 +9,9 @@ nav {
   padding-left: 1.5em ;
   padding-right: 1.5em;
   padding-top: 1em;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 span {
   font-family: 'Bungee', cursive;
