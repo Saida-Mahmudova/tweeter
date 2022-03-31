@@ -1,13 +1,13 @@
 .tweet-section {
   display:block;
   padding: 20px;
-}
-.posted-tweet {
-  display: flex;
-  flex-direction: column;
   border: 4px #57544d solid;
   margin-top:50px;
   margin-bottom: 10px;
+}
+#tweets-container {
+  display: flex;
+  flex-direction: column;
 }
 .posted-tweet >:hover {
   box-shadow: 10px 10px #c9cae2;
@@ -19,8 +19,8 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-.name > p {
-    font-weight: 700;
+.handle {
+  font-weight: 700;
   color:#c8cde4;
 }
 
@@ -54,7 +54,7 @@
   color:orange;
 }
 
-.name div{
+.username {
 display: flex;
 flex-direction: row;
 }
