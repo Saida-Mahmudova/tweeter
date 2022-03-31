@@ -29,6 +29,9 @@
   border-bottom: 4px #57544d solid;
   padding-left: 10px;
   font-weight: 700;
+  overflow-wrap: break-word;
+  line-height: 1.5em;
+    padding-bottom: 1.5em;
 }
 
 .tweet-details {
@@ -39,7 +42,7 @@
   font-size:15px;
 }
 
-.tweet-details div {
+.icons {
   display: flex;
   flex-direction: row;
 }
@@ -57,4 +60,16 @@
 .username {
 display: flex;
 flex-direction: row;
+justify-content: space-between;
 }
+
+.error-show {
+  display:none;
+  /* visibility: hidden; */
+  border: 2px solid red;
+  color:red;
+  padding: 10px;
+}
+
+/* .error-hide {
+} */
