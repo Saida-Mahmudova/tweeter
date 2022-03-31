@@ -60,22 +60,22 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form method="POST" action="/tweets/">
+      <form class="tweet-form" method="POST" action="/tweets">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class="button">
-          <button type="submit">Tweet</button>
+          <button id="submit-button" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    <section class="posted-tweet">
+    <section class="posted-tweet" id="tweets-container">
       <article class="tweet-section">
         <header class="name">
-          <div><img src="/images/profile-hex.png" height="80px" width="80px">
+          <div class="username"><img src="https://i.imgur.com/nlhLi3I.png" height="80px" width="80px"></a>
             <p>Rhoda Jacobs</p>
           </div>
-          <p>@MrsJacobs</p>
+          <p class="handle">@MrsJacobs</p>
         </header>
         <div class="message">
           <p>Hello World!</p>
