@@ -24,36 +24,39 @@
 //   }
 // ]
 
-const renderTweets = () => {
+const renderTweets = (tweets) => {
+  for (let tweet of tweets) {
+    let result = createTweetElement(tweet);
+    $('#tweets-container').prepend(result);
+  }
+};
+
+const loadTweets = () => {
   $.ajax({
     url: "/tweets",
     type: "GET"
   }).then((tweets) => {
-    for (let tweet of tweets) {
-      let result = createTweetElement(tweet);
-      $('#tweets-container').prepend(result);
-    }
-  });
-};
-
-const today = new Date();
-let time = today.getTime();
+    renderTweets(tweets);
+  })
+}
 
 const createTweetElement = (tweet) => {
   const article = $('<article>').addClass('tweet-section');
-  const avatar = $('<div><img src =""').text(`${tweet.user.avatars}`).addClass('username');
-  const username = $('<div><p>').text(`${tweet.user.name}`).addClass('username');
+  const avatar = $(`<img src =${tweet.user.avatars}>`)
+  const username = $('<p>').text(`${tweet.user.name}`)
+  const userDetails = $('<div>').addClass('username').append(avatar, username)
   const handle = $('<p>').text(`${tweet.user.handle}`).addClass('handle');
-  const head = $('<header>').addClass("name").append(avatar, username, handle);
+  const head = $('<header>').addClass("name").append(userDetails, handle);
   const text = $('<p>').text(`${tweet.content.text}`).addClass('message');
-  const date = $('<p>').text(`${Math.floor((time - tweet.created_at) / (1000 * 60 * 60 * 24))} days ago`).addClass('tweet-details');
-  let $tweet = article.append(head, text, date);
+  const date = $('</div><p>').text(`${timeago.format(tweet.created_at)}`)
+  const icons = $('<div><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i>').addClass('icons')
+  const footer = $('<footer>').addClass('tweet-details').append(date, icons);
+  const $tweet = article.append(head, text, footer);
   return $tweet;
 };
 
 $(() => {
-
-  renderTweets();
+  loadTweets();
 
   $('.tweet-form').on('submit', (e) => {
     e.preventDefault();
@@ -64,7 +67,7 @@ $(() => {
       data: $('.tweet-form').serialize()
     }).then(() => {
       $('#submit-button').prop("disabled", false).text("TWEET");
-      renderTweets();
+      loadTweets();
       $('#tweet-text').val('');
       $('#tweet-text').focus();
     });
