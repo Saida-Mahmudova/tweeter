@@ -25,6 +25,7 @@ const loadTweets = () => {
     url: "/tweets",
     type: "GET"
   }).then((tweets) => {
+    $('#tweets-container').empty();
     renderTweets(tweets);
   })
 }
