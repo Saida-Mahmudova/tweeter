@@ -1,6 +1,6 @@
-$(() => {
+$(document).ready(function () {
   const maxLength = 140;
-  $('textarea').keyup(() => {
+  $('textarea').keyup(function () {
     let length = $(this).val().length;
     if (length !== 0) {
       if ($('#error').hasClass('error-show')) {
