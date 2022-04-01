@@ -1,13 +1,13 @@
 const createTweetElement = (tweet) => {
   const article = $('<article>').addClass('tweet-section');
-  const avatar = $(`<img src =${tweet.user.avatars}>`);
+  const avatar = $(`<img src =${tweet.user.avatars}>`).addClass('profile-pic');
   const username = $('<p>').text(`${tweet.user.name}`);
-  const userDetails = $('<div>').addClass('username').append(avatar, username)
+  const userDetails = $('<div>').addClass('username').append(avatar, username);
   const handle = $('<p>').text(`${tweet.user.handle}`).addClass('handle');
   const head = $('<header>').addClass("name").append(userDetails, handle);
   const text = $('<p>').text(`${tweet.content.text}`).addClass('message');
   const date = $('<div><p>').text(`${timeago.format(tweet.created_at)}`);
-  const icons = $('<div><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i>').addClass('icons')
+  const icons = $('<div><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i>').addClass('icons');
   const footer = $('<footer>').addClass('tweet-details').append(date, icons);
   const $tweet = article.append(head, text, footer);
   return $tweet;
@@ -27,8 +27,8 @@ const loadTweets = () => {
   }).then((tweets) => {
     $('#tweets-container').empty();
     renderTweets(tweets);
-  })
-}
+  });
+};
 
 
 const validate = (tweet) => {

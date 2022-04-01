@@ -1,4 +1,18 @@
-.main-header {
+/* desktop style*/
+@media only screen and (min-width: 1024px) {
+ .main-header {
+  float: left;
+  margin: 0 6vw 0 3vw;
+  width: 35vw;
+  background-color: orange;
+  background-image: url("/images/checkered-pattern.png");
+  padding-top: 5vh;
+}
+} 
+
+/*responsive*/
+@media only screen and (max-width: 1023px) {
+  .main-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,9 +21,23 @@
   width:100%;
   background-color: orange;
   background-image: url("/images/checkered-pattern.png");
-  margin-top:8%;
+  padding-top:8%;
+  margin-bottom:5vh;
+}
 }
 
-header h2 {
-  display: block;
+.header-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-name {
+  color: white;
+  font-size: 1.5em;
+}
+
+.profile-pic {
+  width: 4vw;
+  padding-right: 5px;
 }

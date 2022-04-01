@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 3vh;
 }
 
 #tweet-text {
@@ -12,9 +12,11 @@
   font-weight: 700;
   height: auto;
 }
+
 label {
   font-weight: 700;
 }
+
 .new-tweet :focus {
   outline: none;
 }

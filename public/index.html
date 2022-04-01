@@ -27,42 +27,49 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
+  <script type="text/javascript" src="/scripts/toggled-textarea.js"></script>
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
 
 
   <!-- Font Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- TimeAgo-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
-    <div>
+    <div class="nav-div">
       <div class="inline"><b>Write</b> a new tweet</div>
-      <i class="fa-solid fa-angles-down"></i>
-
+      <div><i class="fa-solid fa-angles-down"></i></div>
     </div>
 
   </nav>
   <header class="main-header">
-    <div>
+    <div class="header-div">
       <img src="/images/profile-hex.png">
-      <br>
-      <div>
-        <h2><strong>Saida</strong> M.</h2>
-      </div>
+      <p class="user-name">
+        <b>Saida</b> Mahmudova
+      </p>
+    </div>
   </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form class="tweet-form" method="POST" action="/tweets">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
+      <div id="error"></div>
+      <form class="tweet-form" method="POST" action="/tweets" id="tweet-form-id">
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="button">
           <button id="submit-button" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
@@ -70,24 +77,6 @@
       </form>
     </section>
     <section class="posted-tweet" id="tweets-container">
-      <article class="tweet-section">
-        <header class="name">
-          <div class="username"><img src="https://i.imgur.com/nlhLi3I.png" height="80px" width="80px"></a>
-            <p>Rhoda Jacobs</p>
-          </div>
-          <p class="handle">@MrsJacobs</p>
-        </header>
-        <div class="message">
-          <p>Hello World!</p>
-        </div>
-        <footer class="tweet-details">
-          <p>10 days ago</p>
-          <div><i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
     </section>
   </main>
 </body>

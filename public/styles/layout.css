@@ -19,29 +19,24 @@ html {
 body {
   color: #545149;
   background-color: #f6f1ec; /*#f4f1ec*/
-  font-size: 24px;
+  font-size: 20px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 main {    
-  margin: auto;    
   display: flex;    
   align-items: center;    
-  justify-content: center;    
   flex-direction: column;    
-  background-color: #f4f1ec;  
 }
+
 section {
   width: 90%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 20px;
 }
+
 form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 8vh;
 }
 
 button {
@@ -50,6 +45,7 @@ button {
   font-family: 'Bungee';
   display: block;
 }
+
 .counter {
   font-family: 'Bungee';
   font-weight:700;
@@ -60,3 +56,4 @@ button {
   font-family: 'Bungee';
   font-weight: 700;
 }
+

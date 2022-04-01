@@ -1,24 +1,20 @@
 .tweet-section {
-  display:block;
-  padding: 20px;
+  padding: 2%;
   border: 4px #57544d solid;
-  margin-top:50px;
-  margin-bottom: 10px;
+  margin-bottom:8vh;
 }
-#tweets-container {
-  display: flex;
-  flex-direction: column;
-}
+
 .posted-tweet >:hover {
   box-shadow: 10px 10px #c9cae2;
 }
+
 .name {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
 }
+
 .handle {
   font-weight: 700;
   color:#c8cde4;
@@ -27,19 +23,20 @@
 .message {
   display: block;
   border-bottom: 4px #57544d solid;
-  padding-left: 10px;
+  padding-left: 2%;
   font-weight: 700;
   overflow-wrap: break-word;
   line-height: 1.5em;
-    padding-bottom: 1.5em;
+  padding-bottom: 1em;
 }
 
 .tweet-details {
   display: flex;
   justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size:15px;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 0.7em;
+  margin-top: -1%;
 }
 
 .icons {
@@ -58,18 +55,15 @@
 }
 
 .username {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 
 .error-show {
   display:none;
-  /* visibility: hidden; */
-  border: 2px solid red;
+  border: 4px solid red;
   color:red;
-  padding: 10px;
+  padding: 1.5vw;
+  margin-bottom:5vh;
+  text-align:center;
 }
-
-/* .error-hide {
-} */
