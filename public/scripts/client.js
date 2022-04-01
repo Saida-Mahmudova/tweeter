@@ -1,3 +1,4 @@
+// create new html elements for appending them to article
 const createTweetElement = (tweet) => {
   const article = $('<article>').addClass('tweet-section');
   const avatar = $(`<img src =${tweet.user.avatars}>`).addClass('profile-pic');
@@ -13,6 +14,7 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
+// function for rendering created tweets
 const renderTweets = (tweets) => {
   for (let tweet of tweets) {
     let result = createTweetElement(tweet);
@@ -20,6 +22,7 @@ const renderTweets = (tweets) => {
   }
 };
 
+// function for loading newly tweeted tweets
 const loadTweets = () => {
   $.ajax({
     url: "/tweets",
@@ -30,7 +33,7 @@ const loadTweets = () => {
   });
 };
 
-
+// function for validation to check if tweet is suitable for tweeting
 const validate = (tweet) => {
   let result;
   if (tweet === '') {
@@ -49,6 +52,7 @@ $(() => {
   loadTweets();
 
   $('.tweet-form').on('submit', (e) => {
+    //prevent defaul events for tweeting without loading
     e.preventDefault();
     if (validate($('#tweet-text').val()) === true) {
       $('#submit-button').prop("disabled", true).text("Loading");
@@ -60,6 +64,7 @@ $(() => {
         $('#submit-button').prop("disabled", false).text("Tweet");
         $('.counter').text(140);
         loadTweets();
+        //clear textarea
         $('#tweet-text').val('');
         $('#tweet-text').focus();
       });
